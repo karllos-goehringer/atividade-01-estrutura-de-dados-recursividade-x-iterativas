@@ -1,8 +1,6 @@
-const vetorDesordenadoBase: number[] = Array.from({ length: 100 }, () => Math.floor(Math.random() * 1000));
+import { vetPlaca,vetKM,vetConsumo } from "./vetores";
 
-const vetorOrdenado: number[] = vetorDesordenadoBase
-    .slice()
-    .sort((a, b) => a - b);
+const vetorOrdenado: number[] = vetKM.slice().sort((a, b) => a - b);
 
 const alvoInicio = vetorOrdenado[10];  
 const alvoMeio = vetorOrdenado[50];     
@@ -89,7 +87,7 @@ executarTestes();
 //conclusão:
     /*
         em casos que o elemento está no início do vetor, a pesquisa sequencial iterativa é mais rápida, pois encontra o elemento rapidamente.
-        a pesquisa sequencial recursiva é foi mais lenta na maioria dos casos.
+        a pesquisa sequencial recursiva foi mais lenta na maioria dos casos.
         a pesquisa sequencial recursiva foi mais rápida em 3 dos 4 casos, onde só não foi mais eficiente no terceiro cenário.
         a binaria interativa se demonstrou menos eficinente no geral que a sequencial, só foi mais rápida no cenário 3 que é a busca nas posições finais do vetor.
     */
